@@ -5,8 +5,8 @@ import QtQuick.Layouts 1.2
 Rectangle {
     id: riverItem
     readonly property color evenBackgroundColor: "#f9f9f9"
-    readonly property color oddBackgroundColor: "#ffffff"
-    readonly property color selectedBackgroundColor: "#eaf1f7"
+    readonly property color oddBackgroundColor: "#7851A9"
+    readonly property color selectedBackgroundColor: "#7f7679"
 
     property bool isCurrent: riverItem.ListView.view.currentIndex === index
     property bool selected: riverItemMouseArea.containsMouse || isCurrent
@@ -19,12 +19,12 @@ Rectangle {
         State {
             when: selected
             PropertyChanges { target: riverItem;
-                color: isCurrent ? palette.highlight : selectedBackgroundColor
+                color: isCurrent ? "#4B0082" : "#7f7679"
             }
         },
         State {
             when: !selected
-            PropertyChanges { target: riverItem;  color: isCurrent ? palette.highlight : index % 2 == 0 ? evenBackgroundColor : oddBackgroundColor }
+            PropertyChanges { target: riverItem;  color: isCurrent ? palette.highlight : index % 2 == 0 ? "#7851A9" : oddBackgroundColor }
         }
     ]
 
@@ -51,14 +51,14 @@ Rectangle {
                 id: t1
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: "Название реки:"
-                color: "firebrick"
+                color: "#FFDB8B"
                 font.pointSize: 14
             }
             Text {
                 id: textName
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: Name
-                color: "red"
+                color: "#FFDB8B"
                 font.pointSize: 14
                 font.bold: true
             }
@@ -72,13 +72,13 @@ Rectangle {
             Text {
 
                 text: "Протяженность"
-                color: "firebrick"
+                color: "#FFDB8B"
                 font.pointSize: 14
             }
             Text {
                 id: textLenght
                 text: Lenght
-                color: "purple"
+                color: "#FFCF48"
                 font.pointSize: 14
             }
         }
@@ -90,13 +90,13 @@ Rectangle {
             Text {
 
                 text: "Впадает в"
-                color: "firebrick"
+                color: "#FFDB8B"
                 font.pointSize: 14
             }
             Text {
                 id: textFallsIn
                 text: FallsIn
-                color: "purple"
+                color: "#FFCF48"
                 font.pointSize: 14
             }
         }
@@ -108,13 +108,13 @@ Rectangle {
             Text {
 
                 text: "Годовой сток"
-                color: "firebrick"
+                color: "#FFDB8B"
                 font.pointSize: 14
             }
             Text {
                 id: textAnnualRunoff
                 text: AnnualRunoff
-                color: "purple"
+                color: "#FFCF48"
                 font.pointSize: 14
             }
         }
@@ -126,13 +126,13 @@ Rectangle {
             Text {
 
                 text: "Площадь бассейна"
-                color: "firebrick"
+                color: "#FFDB8B"
                 font.pointSize: 14
             }
             Text {
                 id: textCoolArea
                 text: CoolArea
-                color: "purple"
+                color: "#FFCF48"
                 font.pointSize: 14
             }
         }

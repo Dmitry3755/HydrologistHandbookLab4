@@ -6,15 +6,6 @@ RiverListSql::RiverListSql(QObject *parent) :
 {
      QSqlDatabase::removeDatabase("myConnection");
 
-     /* db = QSqlDatabase::addDatabase("QODBC3", "myConnection");
-
-     QString connectString = "Driver={SQL Server Native Client 11.0};";
-     connectString.append("Server=localhost\\SQLEXPRESS;");
-     connectString.append("Database=Lab4Rivers;");
-     connectString.append("Trusted_Connection=yes;");
-
-    db.setDatabaseName(connectString); */
-
      db = QSqlDatabase::addDatabase("QSQLITE", "myConnection");
      db.setDatabaseName("Rivers.sqlite3");
 
