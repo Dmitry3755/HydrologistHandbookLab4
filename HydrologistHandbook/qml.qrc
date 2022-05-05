@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>DialogForRiver.qml</file>
+        <file>DelegateForRivers.qml</file>
+    </qresource>
+</RCC>
